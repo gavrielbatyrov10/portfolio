@@ -37,7 +37,7 @@ export default function Hero() {
                 </p>
                 <figure className="modal__img--wrapper">
                   <img
-                    src="http://localhost:5173/src/assets/modal.svg"
+                    src="./src/assets/undraw_read_notes_pa7e.svg"
                     alt=""
                     className="modal__img"
                   />
@@ -52,7 +52,7 @@ export default function Hero() {
           <figure className="img__wrapper">
             <img
               className="landing__img"
-              src="http://localhost:5173/src/assets/landing.svg"
+              src="./src/assets/undraw_read_notes_pa7e.svg"
               alt="Landing Illustration"
             />
           </figure>
