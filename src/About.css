@@ -1,0 +1,221 @@
+.about-section {
+    background: linear-gradient(135deg, #282c34 30%, #61dafb 90%);
+    padding: 7rem 3rem;
+    color: #3f64d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 4rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.about-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3);
+}
+
+.about-left,
+.about-right {
+    width: 48%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.about-left {
+    animation-delay: 0.3s;
+}
+
+.about-right {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-left h1,
+.about-right h2 {
+    color: #282c34;
+    margin-bottom: 2rem;
+    font-size: 3.2rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1.2px;
+    border-bottom: 3px solid #61dafb;
+    padding-bottom: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-left h1:before,
+.about-right h2:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #61dafb;
+    bottom: -3px;
+    left: -100%;
+    transition: all 0.5s ease;
+}
+
+.about-left h1:hover:before,
+.about-right h2:hover:before {
+    left: 0;
+}
+
+.about-left p,
+.about-right ul,
+.about-right p {
+    color: #444;
+    font-size: 1.4rem;
+    line-height: 2.2;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.about-right ul li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    color: #333;
+    position: relative;
+    padding-left: 2.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-right ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1rem;
+    height: 1rem;
+    background: #61dafb;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.about-right ul li:hover:before {
+    transform: scale(1.5) translateY(-50%);
+}
+
+.about-right ul li:hover {
+    color: #61dafb;
+    transform: translateX(10px);
+}
+
+.about-right p {
+    margin-top: 2.5rem;
+    color: #555;
+    font-size: 1.3rem;
+    border-left: 3px solid #61dafb;
+    padding-left: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        padding: 3.5rem;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+
+    .about-left h1,
+    .about-right h2 {
+        font-size: 2.8rem;
+        text-align: center;
+    }
+
+    .about-left p,
+    .about-right ul,
+    .about-right p {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .about-right ul li {
+        font-size: 1.4rem;
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 2.5rem;
+    }
+
+    .about-left h1,
+    .about-right h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .about-left p,
+    .about-right ul,
+    .about-right p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .about-right ul li {
+        font-size: 1.3rem;
+        padding-left: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 2rem;
+    }
+
+    .about-left h1,
+    .about-right h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .about-left p,
+    .about-right ul,
+    .about-right p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .about-right ul li {
+        font-size: 1.2rem;
+        padding-left: 1.6rem;
+    }
+}
