@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Footer.css";
 import Modal from "./Modal"; // Import the Modal component
 import ContactForm from "./Contact"; // Import the ContactForm component
+import resume from "./assets/resume.pdf"; // Correctly import the PDF
 
 export default function Footer() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -40,18 +41,28 @@ export default function Footer() {
             href="https://github.com/gavrielbatyrov10"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub"
           >
-            <i className="fab fa-github">github</i>
+            <i className="fab fa-github" aria-hidden="true"></i> GitHub
           </a>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/gavriel-batyrov/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
-            <i className="fab fa-linkedin">Linkedin</i>
+            <i className="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
           </a>
-          <a href="#contact" onClick={toggleModal}>
-            <i className="fas fa-envelope"></i>
+          <a
+            href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Resume"
+          >
+            <i className="fas fa-file-pdf" aria-hidden="true"></i> Resume
+          </a>
+          <a href="#contact" onClick={toggleModal} aria-label="Contact">
+            <i className="fas fa-envelope" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -68,8 +79,9 @@ export default function Footer() {
             <div className="modal-left-content">
               <h3 className="modal__header1">Let's Connect</h3>
               <p className="modal__para">
-                I would love to hear from you. Whether it's a project, job
-                opportunity, or just a chat, feel free to reach out!
+                I'm currently looking for new opportunities! If you have a job
+                opening or would like to discuss potential roles, please reach
+                out—I'd love to connect.
               </p>
             </div>
           }

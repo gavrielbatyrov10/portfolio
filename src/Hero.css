@@ -143,6 +143,12 @@
 
     .hero h2 {
         padding-left: 0;
+        font-size: 1em;
+    }
+
+    .hero p {
+        padding-left: 0;
+        font-size: 1em;
     }
 
     .hero__wrapper--text {

@@ -8,9 +8,10 @@ export default function About() {
         <div className="about-left">
           <h1>About Me</h1>
           <p>
-            Hi there! I'm Gavriel, a passionate Frontend Software Engineer with
-            a knack for building user-friendly, responsive web applications. I
-            enjoy turning complex problems into simple, beautiful interfaces.
+            Hi there! I'm Gavriel, a Fullstack Software Engineer who’s
+            passionate about crafting user-friendly and responsive web
+            applications. I love transforming complex challenges into elegant,
+            intuitive solutions that make life easier.
           </p>
         </div>
         <div className="about-right">

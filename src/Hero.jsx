@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Hero.css";
 import Modal from "./Modal";
-import ContactForm from "./Contact"; // Ensure you import ContactForm if it is a separate component
+import ContactForm from "./Contact";
+import landing from "./assets/landing.svg";
+import modal from "./assets/modal.svg";
 
 export default function Hero() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -37,8 +39,8 @@ export default function Hero() {
                 </p>
                 <figure className="modal__img--wrapper">
                   <img
-                    src="./src/assets/undraw_read_notes_pa7e.svg"
-                    alt=""
+                    src={modal} // Update path if necessary
+                    alt="Contact Illustration"
                     className="modal__img"
                   />
                 </figure>
@@ -52,7 +54,7 @@ export default function Hero() {
           <figure className="img__wrapper">
             <img
               className="landing__img"
-              src="./src/assets/undraw_read_notes_pa7e.svg"
+              src={landing} // Update path if necessary
               alt="Landing Illustration"
             />
           </figure>
