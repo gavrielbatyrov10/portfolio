@@ -1,28 +1,31 @@
 import React from "react";
 import "./Projects.css";
+import projectsite from "./assets/projectsite.png"; // Import the image
+import projectsitet2 from "./assets/projectsitet2.png"; // Import the correct image name
 
 export default function Projects() {
   const projectList = [
     {
-      title: "Project One",
+      title: "Puppy Bowl",
       description:
-        "A detailed exploration of Project One, focusing on innovative features and user experience.",
-      imageUrl: "https://via.placeholder.com/300x200",
-      link: "#",
+        "A backend application with functionalities to add, delete, and retrieve data, built using Express and Prisma. The tech stack for this project includes Node.js, JavaScript, Git, GitHub, Express, and Prisma.",
+      imageUrl:
+        "https://images.prismic.io/turing/652ec2a4fbd9a45bcec8194e_Express_js_11zon_0a5a935350.webp?auto=format%2Ccompress&fit=max&w=1920",
+      link: "https://github.com/gavrielbatyrov10/Puppy-Bowl",
     },
     {
-      title: "Project Two",
+      title: "Paw Pals",
       description:
-        "Project Two showcases advanced technology solutions with a user-friendly design.",
-      imageUrl: "https://via.placeholder.com/300x200",
-      link: "#",
+        "A fullstack application built using React and Express, providing a platform for pet owners to connect and share. The tech stack for this project includes React, Express, Node.js, JavaScript, Git, GitHub, Prisma, HTML, and CSS.",
+      imageUrl: projectsitet2,
+      link: "https://fullstackproject1-838j.onrender.com/", // Fix the link and remove extra attributes
     },
     {
-      title: "Project Three",
+      title: "Handy Chevra",
       description:
-        "A comprehensive look at Project Three, highlighting its impact and market relevance.",
-      imageUrl: "https://via.placeholder.com/300x200",
-      link: "#",
+        "A modern and responsive frontend application for a handyman service, built with React and CSS to provide an intuitive and user-friendly experience.",
+      imageUrl: projectsite, // Directly use the imported image
+      link: "https://handychevra.com/",
     },
   ];
 
@@ -34,10 +37,19 @@ export default function Projects() {
           <div className="project-card" key={index}>
             <div
               className="project-image"
-              style={{ backgroundImage: `url(${project.imageUrl})` }}
+              style={{
+                backgroundImage: `url(${project.imageUrl})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className="overlay">
-                <a href={project.link} className="project-link">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
                   View Project
                 </a>
               </div>

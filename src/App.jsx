@@ -21,11 +21,11 @@ export default function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Hero />
+      <Header toggleModal={toggleModal} />
+      <Hero toggleModal={toggleModal} />
       <About />
       <Projects />
-      <Footer />
+      <Footer toggleModal={toggleModal} />
 
       <Modal
         isOpen={isModalOpen}
@@ -34,8 +34,9 @@ export default function App() {
           <div className="modal-left-content">
             <h2>Let's Connect</h2>
             <p>
-              I would love to hear from you. Whether it's a project, job
-              opportunity, or just a chat, feel free to reach out!
+              I’m currently looking for new opportunities! If you have a job
+              opening or would like to discuss potential roles, please reach
+              out—I’d love to connect.
             </p>
           </div>
         }

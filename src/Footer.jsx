@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Footer.css";
-import Modal from "./Modal"; // Import the Modal component
-import ContactForm from "./Contact"; // Import the ContactForm component
-import resume from "./assets/resume.pdf"; // Correctly import the PDF
+import Modal from "./Modal";
+import ContactForm from "./Contact";
+import modalImage from "./assets/modal.svg";
+import resume from "./assets/resume.pdf";
 
 export default function Footer() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -30,7 +31,13 @@ export default function Footer() {
               <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="#contact" onClick={toggleModal}>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleModal();
+                }}
+              >
                 Contact
               </a>
             </li>
@@ -79,10 +86,20 @@ export default function Footer() {
             <div className="modal-left-content">
               <h3 className="modal__header1">Let's Connect</h3>
               <p className="modal__para">
-                I'm currently looking for new opportunities! If you have a job
-                opening or would like to discuss potential roles, please reach
-                out—I'd love to connect.
+                I'm actively pursuing opportunities as a software engineer and
+                would be thrilled to connect with others in the field. If you
+                have a job opening or simply want to discuss anything related to
+                technology and development, I'd be happy to hear from you. Don't
+                hesitate to get in touch—I'm eager to explore new possibilities
+                and engage in meaningful conversations.
               </p>
+              <figure className="modal__img--wrapper">
+                <img
+                  src={modalImage}
+                  alt="Contact Illustration"
+                  className="modal__img"
+                />
+              </figure>
             </div>
           }
           rightContent={<ContactForm />}

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Header.css";
-import Modal from "./Modal"; // Ensure you import your Modal component
-import ContactForm from "./Contact"; // Import your ContactForm component
+import Modal from "./Modal"; // Import the Modal component
+import ContactForm from "./Contact"; // Import the ContactForm component
+import modalImage from "./assets/modal.svg"; // Import the modal image
 
 export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -60,7 +61,7 @@ export default function Header() {
         </nav>
       </div>
 
-      {/* Modal Component */}
+      {/* Modal for Contact Form */}
       {isModalOpen && (
         <Modal
           isOpen={isModalOpen}
@@ -69,9 +70,20 @@ export default function Header() {
             <div className="modal-left-content">
               <h3 className="modal__header1">Let's Connect</h3>
               <p className="modal__para">
-                I would love to hear from you. Whether it's a project, job
-                opportunity, or just a chat, feel free to reach out!
+                I'm actively pursuing opportunities as a software engineer and
+                would be thrilled to connect with others in the field. If you
+                have a job opening or simply want to discuss anything related to
+                technology and development, I'd be happy to hear from you. Don't
+                hesitate to get in touch—I'm eager to explore new possibilities
+                and engage in meaningful conversations.
               </p>
+              <figure className="modal__img--wrapper">
+                <img
+                  src={modalImage}
+                  alt="Contact Illustration"
+                  className="modal__img"
+                />
+              </figure>
             </div>
           }
           rightContent={<ContactForm />}

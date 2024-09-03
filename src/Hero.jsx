@@ -34,8 +34,12 @@ export default function Hero() {
               <div className="modal-left-content">
                 <h3 className="modal__header1">Let's Connect</h3>
                 <p className="modal__para">
-                  I would love to hear from you. Whether it's a project, job
-                  opportunity, or just a chat, feel free to reach out!
+                  I'm actively pursuing opportunities as a software engineer and
+                  would be thrilled to connect with others in the field. If you
+                  have a job opening or simply want to discuss anything related
+                  to technology and development, I'd be happy to hear from you.
+                  Don't hesitate to get in touch—I'm eager to explore new
+                  possibilities and engage in meaningful conversations.
                 </p>
                 <figure className="modal__img--wrapper">
                   <img
