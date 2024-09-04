@@ -8,10 +8,10 @@ export default function Projects() {
     {
       title: "Puppy Bowl",
       description:
-        "A backend application with functionalities to add, delete, and retrieve data, built using Express and Prisma. The tech stack for this project includes Node.js, JavaScript, Git, GitHub, Express, and Prisma.",
+        "A backend API for managing books and authors, built with Express.js and Prisma. It supports create, read, update, and delete operations, using Node.js and JavaScript, with version control via Git and GitHub.",
       imageUrl:
         "https://images.prismic.io/turing/652ec2a4fbd9a45bcec8194e_Express_js_11zon_0a5a935350.webp?auto=format%2Ccompress&fit=max&w=1920",
-      link: "https://github.com/gavrielbatyrov10/Puppy-Bowl",
+      link: "https://github.com/gavrielbatyrov10/books-backend",
     },
     {
       title: "Paw Pals",
