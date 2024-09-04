@@ -6,7 +6,7 @@ import projectsitet2 from "./assets/projectsitet2.png"; // Import the correct im
 export default function Projects() {
   const projectList = [
     {
-      title: "Puppy Bowl",
+      title: "Book Base",
       description:
         "A backend API for managing books and authors, built with Express.js and Prisma. It supports create, read, update, and delete operations, using Node.js and JavaScript, with version control via Git and GitHub.",
       imageUrl:
