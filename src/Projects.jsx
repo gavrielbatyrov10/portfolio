@@ -18,7 +18,7 @@ export default function Projects() {
       description:
         "A fullstack application built using React and Express, providing a platform for pet owners to connect and share. The tech stack for this project includes React, Express, Node.js, JavaScript, Git, GitHub, Prisma, HTML, and CSS.",
       imageUrl: projectsitet2,
-      link: "https://fullstackproject1-838j.onrender.com/", // Fix the link and remove extra attributes
+      link: "https://pawpals-xzlf.onrender.com/", // Fix the link and remove extra attributes
     },
     {
       title: "Handy Chevra",
